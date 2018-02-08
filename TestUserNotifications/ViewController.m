@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import "AppDelegate+Notification.h"
+#import "TimeIntervalViewController.h"
 @interface ViewController ()
 
 @end
@@ -16,7 +17,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSString *s = segue.identifier;
+    if ([s isEqualToString:@"showTimeInterval"]) {
+        TimeIntervalViewController *dVC = segue.destinationViewController;
+        dVC.notificationType = UNtimeIntervalType;
+    }
+    
+    if ([s isEqualToString:@"showTimeIntervalForeground"]) {
+        TimeIntervalViewController *dVC = segue.destinationViewController;
+        dVC.notificationType = UNtimeIntervalForegroundType;
+    }
+    
+    
 }
 
 

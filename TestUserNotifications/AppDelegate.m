@@ -6,7 +6,10 @@
 //  Copyright © 2018年 zm. All rights reserved.
 //
 
+
 #import "AppDelegate.h"
+#import <UserNotifications/UserNotifications.h>
+#import "AppDelegate+Notification.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +19,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self registerNotificationCategory];
+    [self registerRemoteNotification];
     // Override point for customization after application launch.
     return YES;
 }
