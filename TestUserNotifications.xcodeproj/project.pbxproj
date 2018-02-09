@@ -10,6 +10,8 @@
 		981FA7FF202AAE3900BCFB5E /* AuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981FA7FE202AAE3900BCFB5E /* AuthorizationViewController.m */; };
 		981FA805202ACFC300BCFB5E /* TimeIntervalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981FA803202ACFC300BCFB5E /* TimeIntervalViewController.m */; };
 		981FA808202AF95600BCFB5E /* ActionableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981FA807202AF95600BCFB5E /* ActionableViewController.m */; };
+		981FA80B202C337D00BCFB5E /* MeidaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 981FA80A202C337D00BCFB5E /* MeidaViewController.m */; };
+		981FA80F202C38B200BCFB5E /* timor.png in Resources */ = {isa = PBXBuildFile; fileRef = 981FA80E202C38B200BCFB5E /* timor.png */; };
 		98B36ECF2027FC4E00A233F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B36ECE2027FC4E00A233F7 /* AppDelegate.m */; };
 		98B36ED22027FC4E00A233F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98B36ED12027FC4E00A233F7 /* ViewController.m */; };
 		98B36ED52027FC4E00A233F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B36ED32027FC4E00A233F7 /* Main.storyboard */; };
@@ -45,6 +47,9 @@
 		981FA804202ACFC300BCFB5E /* TimeIntervalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeIntervalViewController.h; sourceTree = "<group>"; };
 		981FA806202AF95600BCFB5E /* ActionableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionableViewController.h; sourceTree = "<group>"; };
 		981FA807202AF95600BCFB5E /* ActionableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionableViewController.m; sourceTree = "<group>"; };
+		981FA809202C337D00BCFB5E /* MeidaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeidaViewController.h; sourceTree = "<group>"; };
+		981FA80A202C337D00BCFB5E /* MeidaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeidaViewController.m; sourceTree = "<group>"; };
+		981FA80E202C38B200BCFB5E /* timor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timor.png; sourceTree = "<group>"; };
 		98B36ECA2027FC4E00A233F7 /* TestUserNotifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestUserNotifications.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B36ECD2027FC4E00A233F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		98B36ECE2027FC4E00A233F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +119,7 @@
 		98B36ECC2027FC4E00A233F7 /* TestUserNotifications */ = {
 			isa = PBXGroup;
 			children = (
+				981FA80E202C38B200BCFB5E /* timor.png */,
 				98B36F0220282CE900A233F7 /* TestUserNotifications.entitlements */,
 				98B36ECD2027FC4E00A233F7 /* AppDelegate.h */,
 				98B36ECE2027FC4E00A233F7 /* AppDelegate.m */,
@@ -127,6 +133,8 @@
 				981FA803202ACFC300BCFB5E /* TimeIntervalViewController.m */,
 				981FA806202AF95600BCFB5E /* ActionableViewController.h */,
 				981FA807202AF95600BCFB5E /* ActionableViewController.m */,
+				981FA809202C337D00BCFB5E /* MeidaViewController.h */,
+				981FA80A202C337D00BCFB5E /* MeidaViewController.m */,
 				98B36ED32027FC4E00A233F7 /* Main.storyboard */,
 				98B36ED62027FC4E00A233F7 /* Assets.xcassets */,
 				98B36ED82027FC4E00A233F7 /* LaunchScreen.storyboard */,
@@ -268,6 +276,7 @@
 				98B36EDA2027FC4E00A233F7 /* LaunchScreen.storyboard in Resources */,
 				98B36ED72027FC4E00A233F7 /* Assets.xcassets in Resources */,
 				98B36ED52027FC4E00A233F7 /* Main.storyboard in Resources */,
+				981FA80F202C38B200BCFB5E /* timor.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +308,7 @@
 				98B36F01202800AD00A233F7 /* AppDelegate+Notification.m in Sources */,
 				981FA808202AF95600BCFB5E /* ActionableViewController.m in Sources */,
 				981FA7FF202AAE3900BCFB5E /* AuthorizationViewController.m in Sources */,
+				981FA80B202C337D00BCFB5E /* MeidaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
