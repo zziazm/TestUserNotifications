@@ -43,16 +43,18 @@
     else if ([notification.request.identifier isEqualToString:@"com.test.usernotification.timeIntervalForeground"] || [notification.request.identifier isEqualToString:@"actionable"]){
         completionHandler(UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert);
     }else{
-        completionHandler(UNNotificationPresentationOptionNone);
-
+        completionHandler(UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert);
+//        completionHandler(UNNotificationPresentationOptionNone);
     }
-    
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler {
     NSString *categoryId = response.notification.request.content.categoryIdentifier;
     if ([categoryId isEqualToString:@"saySomething"]) {
         [self handleSaySomthing:response];
+    }
+    if ([categoryId isEqualToString:@"customUI"]) {
+        
     }
     
 }
