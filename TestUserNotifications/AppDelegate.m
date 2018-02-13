@@ -10,52 +10,16 @@
 #import "AppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
 #import "AppDelegate+Notification.h"
-#import <CommonCrypto/CommonDigest.h>
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-- (NSString *) md5:(NSString *) input {
-    const char *cStr = [input UTF8String];
-    unsigned char digest[CC_MD5_DIGEST_LENGTH];
-    CC_MD5( cStr, strlen(cStr), digest ); // This is the md5 call
-    
-    NSMutableString *output = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
-    
-    for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
-        [output appendFormat:@"%02x", digest[i]];
-    
-    return  output;
-}
-
-- (void)downloadAndSaveWithURL:(NSURL*)url
-             completionHandler:(void(^)(NSURL *))completionHandler
-{
-    
-    NSURLSessionDataTask * task = [[NSURLSession sharedSession] dataTaskWithURL:url
-                                                              completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                                                                  if (data) {
-                                                                      NSString *ret = url.absoluteString.pathExtension;
-                                                                      NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
-                                                                      NSURL *cacheUrl = [NSURL fileURLWithPath:cachePath];
-                                                                      NSString *fileName = [[self md5:url.absoluteString] stringByAppendingPathExtension:ret];
-                                                                      NSURL *loacalUrl = [cacheUrl URLByAppendingPathComponent:fileName];
-                                                                      [data writeToURL:loacalUrl atomically:YES];
-                                                                      completionHandler(loacalUrl);
-                                                                  }
-                                                              }];
-    [task resume];
-    
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    [self downloadAndSaveWithURL:[NSURL URLWithString:@"https://pic2.zhimg.com/80/v2-79c46a8b0a3098e72a0d211975acd46e_hd.jpg"] completionHandler:^(NSURL *url) {
-//        NSLog(@"url");
-//    }];
     [self registerNotificationCategory];
-    [self registerRemoteNotification];
+    [self registerNotification];
     // Override point for customization after application launch.
     return YES;
 }

@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate+Notification.h"
 
+typedef NS_ENUM(NSUInteger, UserNotificationType) {
+    UNtimeIntervalType,
+    UNtimeIntervalForegroundType,
+};
+
 @interface TimeIntervalViewController : UIViewController
 @property (nonatomic, assign) UserNotificationType notificationType;
 @end

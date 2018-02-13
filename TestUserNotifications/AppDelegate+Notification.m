@@ -9,7 +9,7 @@
 #import "AppDelegate+Notification.h"
 
 @implementation AppDelegate (Notification)
-- (void)registerRemoteNotification{
+- (void)registerNotification{
     if (NSClassFromString(@"UNUserNotificationCenter")) {
         [UNUserNotificationCenter currentNotificationCenter].delegate = self;
         //请求使用本地和远程通知的权限
